@@ -1,5 +1,7 @@
 require './list'
 require './test'
+require 'pry'
+
 list = List.new
 list.add(15)
 list.add(22)
@@ -21,3 +23,5 @@ list2.add(TestClass.new(5,6))
 list2.print
 
 puts "------------------------"
+binding.pry
+list2.reverse_list
