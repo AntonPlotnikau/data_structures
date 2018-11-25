@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def make_output(array)
   puts array
 end
@@ -13,14 +15,13 @@ def shift(array, shifts)
   array
 end
 
-puts "Array size:"
+puts 'Array size:'
 size = gets.chomp
 start_ar = generate_array(size)
 make_output(start_ar)
 
-puts "Enter shift number"
+puts 'Enter shift number'
 number_of_shifts = gets.chomp
 
-puts "Reworked Array:"
+puts 'Reworked Array:'
 make_output(shift(start_ar, number_of_shifts))
-
