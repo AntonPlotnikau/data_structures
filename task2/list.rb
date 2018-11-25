@@ -57,4 +57,18 @@ class List
   		return node if node.val == value
   	end
   end
+
+	def reverse_list
+	  current_node = @head
+	  previous_node = nil
+	  next_node = nil
+
+	  while current_node
+	    next_node = current_node.next
+	    current_node.next = previous_node
+	    previous_node = current_node
+	    current_node = next_node
+	  end
+	  @head = previous_node
+	end
 end
