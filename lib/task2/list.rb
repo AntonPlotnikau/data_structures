@@ -37,12 +37,13 @@ class List
     node.next = node.next.next
   end
 
-  def print
+  def print_list
     node = @head
-    puts node.val
-    while (node = node.next)
-      puts node.val
+    while node.next
+      print "#{node.val} > "
+      node = node.next
     end
+    print "#{node.val}\n"
   end
 
   def find_before_deleted(value)
@@ -65,7 +66,7 @@ class List
     end
   end
 
-  def reverse_list
+  def reverse_list # main part!
     current_node = @head
     previous_node = nil
     next_node = nil

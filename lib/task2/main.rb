@@ -4,20 +4,15 @@ require './list'
 require './test'
 require 'pry'
 
+numbers = []
+10.times { numbers << rand(0..10) }
+
 list = List.new
-list.add(15)
-list.add(22)
-list.add(43)
-list.add(9)
-list.add(5)
-list.print
 
-puts '------------------------'
-list.delete(43)
-list.print
+numbers.each do |item|
+  list.add(item)
+end
 
-puts '------------------------'
-list.add(22) # woulnd't add repeated elements
-
-puts '------------------------'
+list.print_list
 list.reverse_list
+list.print_list
