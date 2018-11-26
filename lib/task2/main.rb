@@ -16,3 +16,5 @@ end
 list.print_list
 list.reverse_list
 list.print_list
+
+puts list.size
