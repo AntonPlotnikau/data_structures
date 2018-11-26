@@ -6,6 +6,7 @@ require 'pry'
 # simply linked list class
 class List
   attr_accessor :head, :tail
+
   def initialize
     @head = nil
   end
@@ -35,6 +36,17 @@ class List
 
     node = find_before_deleted(value)
     node.next = node.next.next
+  end
+
+  def size
+    node = @head
+    return 1 unless node.next
+    count = 1
+    while (node = node.next)
+      count += 1
+      return count unless node.next
+    end
+    count
   end
 
   def print_list
