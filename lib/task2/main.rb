@@ -13,8 +13,9 @@ numbers.each do |item|
   list.add(item)
 end
 
+puts list.head.val
 list.print_list
 list.reverse_list
-list.print_list
 
-puts list.size
+puts list.tail_element.next.equal?(nil)
+list.print_list
